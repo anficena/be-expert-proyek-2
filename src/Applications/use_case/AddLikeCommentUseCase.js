@@ -7,7 +7,16 @@ class AddLikeCommentUseCase {
     this._likeRepository = likeRepository;
   }
 
-  async execute(useCasePayload) {}
+  async execute(useCasePayload) {
+    const addLike = new AddLikeComment(useCasePayload);
+    await this._threadRepository.verifyThreadAvaibility(addLike.thread_id);
+    await this._commentRepository.verifyCommentAvailability(addLike.comment_id);
+    await this._likeRepository.addOrDeleteLike(addLike);
+
+    return {
+      status: 'success',
+    };
+  }
 }
 
 module.exports = AddLikeCommentUseCase;
