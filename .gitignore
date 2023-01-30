@@ -1,0 +1,12 @@
+node_modules
+coverage
+.env
+forum_api_server.pem
+package-lock.json
+config/database/test.json
+ForumApi_Bc.rar
+ForumApi_Luthfi_Rohmatulloh_first.zip
+ForumApi_Luthfi_Rohmatulloh_Second.zip
+ForumApi_Luthfi_Rohmatulloh_thrid.zip
+ForumApi_Luthfi_Rohmatulloh.zip
+AWS.txt
